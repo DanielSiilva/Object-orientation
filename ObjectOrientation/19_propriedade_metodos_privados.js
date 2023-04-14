@@ -28,9 +28,19 @@ class PessoaFisica extends Pessoa{
     }
 
     getCpf(){
-        return this.#CPF 
+        return this.#removeCPFPontuacao(this.#CPF)
+    }
+
+    #removeCPFPontuacao(CPF){
+        return CPF.replaceAll(',', '').replaceAll('-', '').replaceAll('.', '')
     }
 }
+
+const npf = new PessoaFisica('Daniel', '000.000,000-32')
+
+console.log(npf.getCpf());
+
+
 
 class PessoJuridica extends Pessoa {
     #CNPJ
@@ -59,9 +69,9 @@ class Mei extends PessoJuridica {
 }
 
 
-const nwMei = new Mei('Daniel', '000000')
+// const nwMei = new Mei('Daniel', '000000')
 
-console.log(`Meu nome é: ${nwMei.getNome()}`);
-console.log(`Meu cnpj: ${nwMei.getCNPJ()}`);
-console.log(`Meu limite: ${nwMei.getLimit()}`);
+// console.log(`Meu nome é: ${nwMei.getNome()}`);
+// console.log(`Meu cnpj: ${nwMei.getCNPJ()}`);
+// console.log(`Meu limite: ${nwMei.getLimit()}`);
 
