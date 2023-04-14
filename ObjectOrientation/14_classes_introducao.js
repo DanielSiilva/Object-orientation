@@ -23,11 +23,12 @@ User1.prototype.getNome = function(){
 }
 
 
-//Detalhes: Class é um função que reconhce a palavra reservada constructor que recebe ás proriedades da Class, todo o codigo é imediatamente invocado quando a Class, é instanciada
+//Detalhes: Class é um função que reconhece a palavra reservada constructor que recebe ás proriedades da Class, todo o codigo é imediatamente invocado quando a Class, é instanciada
 
 class Person {
     constructor(name, year){
         //Quando instanciado o this é acionado a um objeto vazio, que é modificado quando a class é instanciada
+        
         this.name = name;
         this.year = year
     }
