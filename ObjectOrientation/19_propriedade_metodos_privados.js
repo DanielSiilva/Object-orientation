@@ -32,6 +32,7 @@ class PessoaFisica extends Pessoa{
     }
 
     #removeCPFPontuacao(CPF){
+        //Aqui podemos realizar todo a logica necessaria para a realização do metodo
         return CPF.replaceAll(',', '').replaceAll('-', '').replaceAll('.', '')
     }
 }
