@@ -54,4 +54,33 @@ class PesssoaFisica extends Person{
 
 const pf = new PesssoaFisica("Daniel", '0225454564')
 
-console.log(pf.name);
+//--------------------------------------------------------
+
+
+
+//console.log(pf.name);
+const arr1 = [1, 1, 2]
+const arr2 = [2, 2,3]
+
+function arrayDiff(a, b) {
+    return a.filter(val => !b.includes(val))
+}
+
+// console.log(arrayDiff(arr1, arr2));
+
+// -------------------------------
+
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+function createPhoneNumber(numbers){
+    let format = "(xxx) xxx-xxxx";
+    
+    for(let i = 0; i < numbers.length; i++){
+      format = format.replace('x', numbers[i]);
+    }
+    return format;
+  }
+
+console.log(createPhoneNumber(numbers));
