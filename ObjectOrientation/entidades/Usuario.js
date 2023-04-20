@@ -1,4 +1,5 @@
 export class User {
+  //Atribultos
     #id;
     #name;
     #email;

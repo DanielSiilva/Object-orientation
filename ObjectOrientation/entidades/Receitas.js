@@ -14,6 +14,8 @@ export class Receita {
       this.imagem = imagem;
       this.totalPorcoes = totalPorcoes;
       this.#tempoPreparo = tempoPreparo;
+
+      //Tranformando em set, para remover id duplicados;
       this.#ingredientes = new Set(ingredientes);
       this.modoPreparo = modoPreparo;
       this.#autorId = autorId;
@@ -60,10 +62,12 @@ export class Receita {
     }
   
     get ingredientes() {
+      //Transformando em todos o valores em arrays
       return Array.from(this.#ingredientes.values());
     }
   
     set ingredientes(ingredientes = []) {
+      //Transformando os dados enviados por array, em new set
       this.#ingredientes = new Set(ingredientes);
     }
   
